@@ -30,31 +30,12 @@ module.exports = function(grunt) {
                 files: ['./app/**/*.js', './test/**/*.js'],
                 tasks: ['jshint', 'mochaTest']
             }
-        },
-        "file-creator": {
-            "api": {
-                files: [{
-                    file: "./app/api/" + grunt.option('name') + "Controller.js",
-                    method: function(fs, fd, done) {
-                        fs.writeSync(fd, "/*jslint node: true */ \n'use strict';\n\nmodule.exports = (function() { \n // implementation here \n})();");
-                        done();
-                    }
-                }, {
-                    file: "./test/api/" + grunt.option('name') + "-test.js",
-                    method: function(fs, fd, done) {
-                        fs.writeSync(fd, "/*jslint node: true */ \n'use strict';\n\nvar expect = require('chai').expect;\nvar " + grunt.option('name') + "Controller = require('../../app/api/" + grunt.option('name') + "Controller.js');\n\ndescribe('" + grunt.option('name') + "',function() {\n\n\tit('your test here');\n\n});");
-                        done();
-                    }
-                }]
-            }
         }
     });
 
-    grunt.loadNpmTasks('grunt-file-creator');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
 
     grunt.registerTask('default', ['jshint', 'mochaTest']);
-
 };

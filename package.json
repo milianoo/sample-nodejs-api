@@ -2,9 +2,9 @@
   "name": "borderguru-test",
   "version": "0.0.1",
   "description": "A test project implemented for burderguru group ",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha $(find test -name '*.js')"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
