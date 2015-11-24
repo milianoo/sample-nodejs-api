@@ -1,0 +1,41 @@
+{
+  "name": "borderguru-test",
+  "version": "0.0.1",
+  "description": "A test project implemented for burderguru group ",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha $(find test -name '*.js')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milianoo/borderguru-test.git"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-mocha-test": "^0.12.7",
+    "jshint-stylish": "latest",
+    "mocha": "^2.3.2",
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongodb": "*",
+    "url": "^0.11.0"
+  },
+  "keywords": [
+    "test",
+    "node.js",
+    "api"
+  ],
+  "author": "Milad Rezazadeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milianoo/borderguru-test/issues"
+  },
+  "homepage": "https://github.com/milianoo/borderguru-test#readme"
+}

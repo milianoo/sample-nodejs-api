@@ -1,0 +1,226 @@
+[
+  {
+    "type": "get",
+    "url": "/items",
+    "title": "retrieve items",
+    "version": "0.0.1",
+    "name": "FindAll",
+    "group": "Items",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "GET http://<host name>/items",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>array</p> ",
+            "optional": false,
+            "field": "payload",
+            "description": "<p>list of items</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>object</p> ",
+            "optional": false,
+            "field": "links",
+            "description": "<p>list links related to the request</p> "
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": [{\n  name: \"Macbook Pro\"\n},\n{\n  name: \"Book 'Guide to Hamburg'\"\n}],\n  \"links\": {self: /api/items}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/model/items.js",
+    "groupTitle": "Items"
+  },
+  {
+    "type": "DELETE",
+    "url": "/orders/:id",
+    "title": "Delete an order",
+    "version": "0.0.1",
+    "name": "DeleteOrder",
+    "group": "Orders",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "id",
+            "description": "<p>The order id.</p> "
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "DELETE http://<host name>/orders/4711",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": { \n     success: true\n  },\n  \"links\": {self: /api/orders/4711}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/model/orders.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "get",
+    "url": "/orders",
+    "title": "Retrieve orders",
+    "version": "0.0.1",
+    "name": "FindAll",
+    "group": "Orders",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "GET http://<host name>/orders",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>array</p> ",
+            "optional": false,
+            "field": "payload",
+            "description": "<p>list of orders</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>object</p> ",
+            "optional": false,
+            "field": "links",
+            "description": "<p>list links related to the request</p> "
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": \n     [{\n         orderId: \"007\",\n         company: \"Cheapskates\",\n         address: \"Lagerstrasse 11\",\n         item: \"Flux compensator\"\n     }],\n  \"links\": {self: /api/orders}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/model/orders.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "post",
+    "url": "/orders",
+    "title": "Create a new order",
+    "version": "0.0.1",
+    "name": "NewOrder",
+    "group": "Orders",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "POST http://<host name>/orders",
+        "type": "json"
+      }
+    ],
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request body example:",
+          "content": "{\n  orderId: '0011',\n  company: 'Cheapskates',\n  address: 'Lagerstrasse 11',\n  item: 'Flux compensator'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>Object</p> ",
+            "optional": false,
+            "field": "payload",
+            "description": "<p>newly created account</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>object</p> ",
+            "optional": false,
+            "field": "links",
+            "description": "<p>list links related to the request</p> "
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": \n     {\n         orderId: \"0011\",\n         company: \"Cheapskates\",\n         address: \"Lagerstrasse 11\",\n         item: \"Flux compensator\"\n     },\n  \"links\": {self: /api/orders}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/model/orders.js",
+    "groupTitle": "Orders"
+  },
+  {
+    "type": "get",
+    "url": "/reports/items",
+    "title": "Retrieve frequent ordered items",
+    "version": "0.0.1",
+    "name": "itemsOrderedCount",
+    "group": "Reports",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "GET http://<host name>/reports/items",
+        "type": "json"
+      }
+    ],
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>array</p> ",
+            "optional": false,
+            "field": "payload",
+            "description": "<p>list of items with order count</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>object</p> ",
+            "optional": false,
+            "field": "links",
+            "description": "<p>list links related to the request</p> "
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": [{ \n     _id: 'Inline Skates', count: 2 },{ \n     _id: 'Macbook', count: 2 \n  }],\n  \"links\": {self: /api/reports/items}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/model/orders.js",
+    "groupTitle": "Reports"
+  }
+]
