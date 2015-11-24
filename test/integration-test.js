@@ -100,7 +100,6 @@ describe('Integration Test', function() {
                     .del('/api/orders/0099')
                     .expect(200)
                     .end(function(err, res) {
-                        console.log(res.body);
                         expect(err).to.be.null;
                         expect(res.body).to.not.be.undefined;
                         expect(res.body.links.self).to.be.equal('/api/orders/0099');

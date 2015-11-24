@@ -8,7 +8,7 @@ module.exports = (function() {
         
         
     var processRequest = function(req, callback) {
-        let path = url.parse(req.url).pathname;
+        var path = url.parse(req.url).pathname;
         
         switch (path) {
             case '/items':
@@ -18,7 +18,7 @@ module.exports = (function() {
             default:
                 callback();
         }
-    }
+    };
 
     var handler = function(req, res, next) {
         processRequest(req, function(result) {
@@ -28,14 +28,14 @@ module.exports = (function() {
                 links: {
                     self: req.originalUrl
                 }
-            }
+            };
             res.status(200).send(output);
 
         });
-    }
+    };
 
     return {
         handler: handler
-    }
+    };
 
 })();

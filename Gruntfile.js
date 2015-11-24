@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             },
 
             // when this task is run, lint the Gruntfile and all js files in src
-            files: ['Gruntfile.js', './app/**/*.js']
+            files: ['Gruntfile.js', './app/controller/*.js','./app/model/*.js', './app/*.js']
         },
         mochaTest: {
             'spec': {

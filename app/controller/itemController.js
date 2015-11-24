@@ -7,18 +7,18 @@ module.exports = (function() {
         items = require('../model/items.js');
 
     var extractFilterFromUrl = function(requestUrl) {
-        let filter = {};
-        let query = url.parse(requestUrl, true).query;
+        var filter = {};
+        var query = url.parse(requestUrl, true).query;
         if (query) {
-            for (let key in query) {
+            for (var key in query) {
                 filter[key] = query[key];
             }
         }
         return filter;
-    }
+    };
 
     var processRequest = function(req, callback) {
-        let path = url.parse(req.url).pathname;
+        var path = url.parse(req.url).pathname;
         var parameters = path.split('/');
         // /api/orders/<parameter 1>/<parameter 2>
 
@@ -30,7 +30,7 @@ module.exports = (function() {
             default:
                 callback();
         }
-    }
+    };
 
     var handler = function(req, res, next) {
         processRequest(req, function(result) {
@@ -40,13 +40,13 @@ module.exports = (function() {
                 links: {
                     self: req.originalUrl
                 }
-            }
+            };
             res.status(200).send(output);
         });
-    }
+    };
 
     return {
         handler: handler
-    }
+    };
 
 })();
