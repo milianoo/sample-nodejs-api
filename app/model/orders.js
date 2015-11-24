@@ -11,7 +11,7 @@ module.exports = (function() {
      * @apiGroup Orders
      *
      * @apiExample Example usage:
-     * POST http://<host name>/orders 
+     * POST http://borderguru-test.herokuapp.com/api/orders 
      *
      * @apiParamExample {json} Request body example:
      *     {
@@ -60,7 +60,7 @@ module.exports = (function() {
      * @apiGroup Orders
      *
      * @apiExample Example usage:
-     * GET http://<host name>/orders 
+     * GET http://borderguru-test.herokuapp.com/api/orders 
      * 
      * @apiSuccess {array} payload list of orders
      * @apiSuccess {object} links list links related to the request
@@ -96,7 +96,7 @@ module.exports = (function() {
      * @apiGroup Reports
      *
      * @apiExample Example usage:
-     * GET http://<host name>/reports/items 
+     * GET http://borderguru-test.herokuapp.com/api/reports/items 
      * 
      * @apiSuccess {array} payload list of items with order count
      * @apiSuccess {object} links list links related to the request
@@ -143,7 +143,7 @@ module.exports = (function() {
      * @apiParam {String} id The order id.
      * 
      * @apiExample Example usage:
-     * DELETE http://<host name>/orders/4711
+     * DELETE http://borderguru-test.herokuapp.com/api/orders/008
      * 
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK
@@ -151,7 +151,7 @@ module.exports = (function() {
      *       "payload": { 
      *          success: true
      *       },
-     *       "links": {self: /api/orders/4711}
+     *       "links": {self: /api/orders/008}
      *     }
      *  
      */

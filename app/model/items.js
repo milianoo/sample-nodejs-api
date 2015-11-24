@@ -12,7 +12,7 @@ module.exports = (function() {
      * @apiGroup Items
      *
      * @apiExample Example usage:
-     * GET http://<host name>/items 
+     * GET http://borderguru-test.herokuapp.com/api/items 
      * 
      * @apiSuccess {array} payload list of items
      * @apiSuccess {object} links list links related to the request
