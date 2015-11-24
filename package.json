@@ -4,6 +4,7 @@
   "description": "A test project implemented for burderguru group ",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "grunt"
   },
   "repository": {
