@@ -11,6 +11,8 @@
         express = require('express'),
         app = express();
     
+    app.use(express.static(__dirname + '/apidoc'));
+    
     app.use(bodyParser.json());
 
     app.use(function(req, res, next) {
@@ -20,7 +22,7 @@
     });
     
     app.get('/help', function(req,res){
-        res.sendFile(__dirname + '/apidoc/index.html');
+        res.sendFile(__dirname + '/index.html');
     });
     
     app.use('/api/orders', orderController.handler);
