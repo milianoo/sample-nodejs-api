@@ -16,10 +16,10 @@ module.exports = (function() {
      *
      * @apiParamExample {json} Request body example:
      *     {
-     *       orderId: '0011',
-     *       company: 'Cheapskates',
-     *       address: 'Lagerstrasse 11',
-     *       item: 'Flux compensator'
+     *       "orderId": "0011",
+     *       "company": "Cheapskates",
+     *       "address": "Lagerstrasse 11",
+     *       "item": "Flux compensator"
      *     } 
      * 
      * @apiSuccess {Object}  payload  newly created account

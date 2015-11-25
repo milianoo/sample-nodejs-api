@@ -9,7 +9,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "GET http://<host name>/items",
+        "content": "GET http://borderguru-test.herokuapp.com/api/items",
         "type": "json"
       }
     ],
@@ -66,7 +66,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "DELETE http://<host name>/orders/4711",
+        "content": "DELETE http://borderguru-test.herokuapp.com/api/orders/008",
         "type": "json"
       }
     ],
@@ -74,7 +74,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": { \n     success: true\n  },\n  \"links\": {self: /api/orders/4711}\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"payload\": { \n     success: true\n  },\n  \"links\": {self: /api/orders/008}\n}",
           "type": "json"
         }
       ]
@@ -92,7 +92,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "GET http://<host name>/orders",
+        "content": "GET http://borderguru-test.herokuapp.com/api/orders",
         "type": "json"
       }
     ],
@@ -136,7 +136,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "POST http://<host name>/orders",
+        "content": "POST http://borderguru-test.herokuapp.com/api/orders",
         "type": "json"
       }
     ],
@@ -144,7 +144,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request body example:",
-          "content": "{\n  orderId: '0011',\n  company: 'Cheapskates',\n  address: 'Lagerstrasse 11',\n  item: 'Flux compensator'\n}",
+          "content": "{\n  \"orderId\": \"0011\",\n  \"company\": \"Cheapskates\",\n  \"address\": \"Lagerstrasse 11\",\n  \"item\": \"Flux compensator\"\n}",
           "type": "json"
         }
       ]
@@ -189,7 +189,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "GET http://<host name>/reports/items",
+        "content": "GET http://borderguru-test.herokuapp.com/api/reports/items",
         "type": "json"
       }
     ],
@@ -222,5 +222,33 @@ define({ "api": [
     },
     "filename": "app/model/orders.js",
     "groupTitle": "Reports"
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p> "
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "app/apidoc/main.js",
+    "group": "_home_ubuntu_workspace_app_apidoc_main_js",
+    "groupTitle": "_home_ubuntu_workspace_app_apidoc_main_js",
+    "name": ""
   }
 ] });

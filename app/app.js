@@ -16,7 +16,8 @@
     app.use(bodyParser.json());
 
     app.use(function(req, res, next) {
-        //console.log(req.method + ' ' + req.url);
+        console.log(req.method + ' ' + req.url);
+        console.log(req.body);
         res.setHeader('Content-Type', 'application/json');
         next();
     });
