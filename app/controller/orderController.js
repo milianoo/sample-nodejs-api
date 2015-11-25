@@ -48,7 +48,7 @@ module.exports = (function() {
 
     var handler = function(req, res, next) {
         processRequest(req, function(result) {
-
+            
             var output = {
                 payload: result,
                 links: {

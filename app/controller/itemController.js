@@ -35,6 +35,7 @@ module.exports = (function() {
     var handler = function(req, res, next) {
         processRequest(req, function(result) {
             // if result is undefind throw 400 error 
+            // if result has 0 lenght throw 404 not found
             var output = {
                 payload: result,
                 links: {

@@ -10,9 +10,9 @@
         reportController = require('./controller/reportController.js'),
         express = require('express'),
         app = express();
-    
+
     app.use(express.static(__dirname + '/apidoc'));
-    
+
     app.use(bodyParser.json());
 
     app.use(function(req, res, next) {
@@ -20,14 +20,23 @@
         res.setHeader('Content-Type', 'application/json');
         next();
     });
-    
-    app.get('/help', function(req,res){
+
+    app.get('/', function(req, res) {
         res.sendFile(__dirname + '/index.html');
     });
-    
+
     app.use('/api/orders', orderController.handler);
     app.use('/api/items', itemController.handler);
     app.use('/api/reports', reportController.handler);
+
+    app.use(function(req, res, next) {
+        res.status(404).send({
+            error: 'not found',
+            links: {
+                self: req.originalUrl
+            }
+        });
+    });
 
     module.exports = app;
 })();
