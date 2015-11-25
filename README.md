@@ -1,60 +1,76 @@
 ## Documentation 
 
 API documentation available [here](http://borderguru-test.herokuapp.com)
+
 Live Demo available [here](http://borderguru-test.herokuapp.com/api/orders)
 
 ## How to use this repository
 
-Clone the repository
+1. Clone the repository
 
 `git clone https://github.com/milianoo/borderguru-test.git`
 
-Install npm packages 
+2. Install npm packages 
 
 `npm install`
 
-Run tasks, to run tests and jslint task
+3. Run mocha test cases and jslint task to validate your JavaScript
 
 `grunt` (or `grunt watch` to run tasks after any changes on files)
 
 
 
 # Arcitecture Overview
-According to the scenario, two models required, to represents the logical resources in the API
+
+Design inspired by MVC arcitectural pattern. 
+
+Models to represents the logical resources in the API: 
+
 - `items`
 - `orders`
 
-Also two controller required to control and process the requests:
+Controllers
+
 - `itemController`
 - `orderController`
     
 In addition, in order to display "How often items has been ordered", it is required to decide which endpoints should handle this request, and as the request is kind of report, therefore I decided to create a seperate endpoint for this purpose. This endpoint will also require a controller, which will take benefit from existing `order` model:
 - `reportController`
 
-The app will be running over `ExpressJS` and will use `MongoDB` for data transactions. 
-
 ## a) Why did you pick your particular your design? What assumptions did you make, and what tradeoffs did you consider?
 
-The focus of this prototype is to represent: 
-- Take benefit from 'Test Driven Development' in implementation of API endpoints 
-- Using MongoDB as an schemaless database and JSON format as basic unit of data storage.
-- using ExpressJS as web application framework to handle http requests. 
-- using Mocha as a testing framework, to run tests serially and generate flexible and accurate reports. 
-- using Sinon for Stubing database objects, and isolate the models and controllers for unit testing. 
-- using Grunt as a Task runner for mocha tests and JSlint tasks. 
+### Development practice 
+
+- **Test Driven Development** in implementation of API endpoints.
+
+### Libraries and frameworks
+
+- `MongoDB` as an schemaless database and JSON format as basic unit of data storage.
+- `ExpressJS` as web application framework to handle http requests. 
+- `Mocha` as a testing framework, to run tests serially and generate flexible and accurate reports. 
+- `Sinon` for Stubing database objects, and isolate the models and controllers for unit testing. 
+- `SuperTest` to test and assert HTTP endpoints. 
+- `Grunt` as a Task runner for mocha tests and JSlint tasks. 
+
+### Objectives 
 
 In addition, I considered below criterias in design and development of API endpoints: 
 
 1. It should be friendly to the developers. 
 2. Explorable via a browser address bar via http methods.
-3. URLs represent API resources.
-4. plural name for API resources. (example: orders, items, etc.)
+3. URLs represent API resources
+   - plural name for API resources. (example: orders, items, etc.)
+4. Proper documentation, and examples for consumers. 
 5. Leveraging http verbs (GET,POST,etc.) to implement CRUD on API resources.
 6. Impelement relations on API resources. 
-   - Each resource might have relation to other resources 
-   - GET api/orders/1/items , will retrieve items in order with id of 1
+   - Each resource might have relation to other resources (example : GET api/orders/1/items, will retrieve items in order with id of 1)
 7. Leveraging http status codes for error handling.
-8. Using JSON as request and reposne Content-Type.
+8. Using JSON as request and reposne Content-Type, to have same data format in all layers. 
+
+### What is next ? 
+
+- Implement more test cases and cover more scenarios and edge cases. 
+- Improve error handling 
 
 ## b) What do you like (and dislike) about Node/Javascript compared to other programming languages?
 
