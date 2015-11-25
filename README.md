@@ -1,6 +1,23 @@
 ## Documentation 
 
-please visit `http://borderguru-test.herokuapp.com`
+API documentation available [here](http://borderguru-test.herokuapp.com)
+Live Demo available [here](http://borderguru-test.herokuapp.com/api/orders)
+
+## How to use this repository
+
+Clone the repository
+
+`git clone https://github.com/milianoo/borderguru-test.git`
+
+Install npm packages 
+
+`npm install`
+
+Run tasks, to run tests and jslint task
+
+`grunt` (or `grunt watch` to run tasks after any changes on files)
+
+
 
 # Arcitecture Overview
 According to the scenario, two models required, to represents the logical resources in the API
