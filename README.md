@@ -69,8 +69,9 @@ In addition, I considered below criterias in design and development of API endpo
 
 ### What is next ? 
 
-- Implement more test cases and cover more scenarios and edge cases. 
-- Improve error handling 
+- Cover more scenarios and edge cases
+- Error handling
+- Data Validation
 
 ## b) What do you like (and dislike) about Node/Javascript compared to other programming languages?
 
