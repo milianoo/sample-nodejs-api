@@ -1,3 +1,7 @@
+## Documentation 
+
+please visit `http://borderguru-test.herokuapp.com`
+
 # Arcitecture Overview
 According to the scenario, two models required, to represents the logical resources in the API
 - `items`
