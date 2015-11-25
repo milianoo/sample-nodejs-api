@@ -16,7 +16,7 @@ In addition, in order to display "How often items has been ordered", it is requi
 
 The app will be running over `ExpressJS` and will use `MongoDB` for data transactions. 
 
-# a) Why did you pick your particular your design? What assumptions did you make, and what tradeoffs did you consider?
+## a) Why did you pick your particular your design? What assumptions did you make, and what tradeoffs did you consider?
 
 The focus of this prototype is to represent: 
 - Take benefit from 'Test Driven Development' in implementation of API endpoints 
@@ -39,7 +39,7 @@ In addition, I considered below criterias in design and development of API endpo
 7. Leveraging http status codes for error handling.
 8. Using JSON as request and reposne Content-Type.
 
-# b) What do you like (and dislike) about Node/Javascript compared to other programming languages?
+## b) What do you like (and dislike) about Node/Javascript compared to other programming languages?
 
 - It's a fact that JavaScript’s rising popularity has brought with it a lot of changes, and the face of web development today is dramatically different. 
 - It's great for development of web applications and restful APIs. 
