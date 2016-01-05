@@ -8,7 +8,7 @@ Live Demo available [here](http://borderguru-test.herokuapp.com/api/orders)
 
 1. Clone the repository
 
-`git clone https://github.com/milianoo/borderguru-test.git`
+`git clone https://github.com/milianoo/sample-nodejs-api.git`
 
 2. Install npm packages 
 
