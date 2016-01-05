@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Documentation 
 
 API documentation available [here](http://borderguru-test.herokuapp.com)
