@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Documentation 
 
 API documentation available [here](http://borderguru-test.herokuapp.com)
@@ -74,7 +73,7 @@ In addition, I considered below criterias in design and development of API endpo
 - Error handling
 - Data Validation
 
-## b) What do you like (and dislike) about Node/Javascript compared to other programming languages?
+## Why JavaScript/ Node.js ?
 
 - It's a fact that JavaScript’s rising popularity has brought with it a lot of changes, and the face of web development today is dramatically different. 
 - It's great for development of web applications and restful APIs. 
